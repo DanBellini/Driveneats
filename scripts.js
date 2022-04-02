@@ -1,5 +1,5 @@
 function selectionFood (foodInfo){
-    const foodSelect = document.querySelector(".select");
+    const foodSelect = document.querySelector(".optionFood").querySelector(".select");
     if (foodSelect !== null){
         foodSelect.classList.remove("select");
     }
@@ -7,7 +7,7 @@ function selectionFood (foodInfo){
 }
 
 function selectionDrink (drinkInfo){
-    const drinkSelect = document.querySelector(".select");
+    const drinkSelect = document.querySelector(".optionDrink").querySelector(".select");
     if (drinkSelect !== null){
         drinkSelect.classList.remove("select");
     }
@@ -15,7 +15,7 @@ function selectionDrink (drinkInfo){
 }
 
 function selectionCandies (candiesInfo){
-    const candiesSelect = document.querySelector(".select");
+    const candiesSelect = document.querySelector(".optionCandies").querySelector(".select");
     if (candiesSelect !== null){
         candiesSelect.classList.remove("select");
     }
