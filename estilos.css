@@ -86,9 +86,8 @@ h6{
     border-radius: 50px;
     
     background-color: #CBCBCB;
-    ;
 }
-.bottom p{
+.bottom p, a{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -97,6 +96,9 @@ h6{
     text-align: center;
     letter-spacing: 0.018em;
     color: #FFFFFF;
+}
+a{
+    text-decoration: none;
 }
 /* Aqui termina o CSS das divs fixas*/
 /* Aqui começa o CSS do conteiner*/
@@ -176,7 +178,9 @@ ion-icon {
 .information{
     z-index: 1;
 }
-
-.green {
-    background-color: #32B72F;
+.green{
+    background-color:#32B72F;
+}
+.hide{
+    display: none;
 }

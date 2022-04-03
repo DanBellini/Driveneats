@@ -5,6 +5,9 @@ let nameDrink;
 let priceDrink;
 let nameCandies;
 let priceCandies;
+let go;
+let message;
+
 
 
 //funcoes para selecionar
@@ -32,7 +35,7 @@ function selectionCandies (candiesSelect){
     candiesSelect.classList.add("select");
 }
 
-//funçoes para salvar as variaveis globais
+//funçoes para salvar as variaveis globais e finalizar pedido
 
 function foodInformation (foodInfo){
     const selectFood = document.querySelector(".optionFood").querySelector(".information");
@@ -41,10 +44,29 @@ function foodInformation (foodInfo){
     }
     foodInfo.classList.add("information");
     nameFood = foodInfo.querySelector("h5").innerHTML
-    priceFood = foodInfo.querySelector("h6").innerHTML
+    priceFood = foodInfo.querySelector(".price").innerHTML
+
     if(nameFood && nameDrink && nameCandies){
-        document.querySelector(".go").classList.add("green");
-        document.querySelector(".confirm").innerHTML = 'Fechar pedido';
+        priceFood = Number(priceFood);
+        priceDrink = Number(priceDrink);
+        priceCandies = Number(priceCandies);
+        let total = priceFood + priceDrink + priceCandies
+        let text = 
+        `
+        Olá, gostaria de fazer o pedido:
+        - Prato: ${nameFood}
+        - Bebida: ${nameDrink}
+        - Sobremesa: ${nameCandies}
+        Total: R$ ${total.toFixed(2)}`
+
+        let encoded = encodeURIComponent(text);
+        
+        finish = 'Fechar pedido';
+        message = "https://wa.me/47984833226?text="+encoded
+        URL = message;
+
+        document.querySelector(".go").classList.add("green");        
+        document.querySelector(".confirm").innerHTML = finish.link(URL);
     }
 }
 function drinkInformation (drinkInfo){
@@ -54,10 +76,29 @@ function drinkInformation (drinkInfo){
     }
     drinkInfo.classList.add("information");
     nameDrink = drinkInfo.querySelector("h5").innerHTML
-    priceDrink = drinkInfo.querySelector("h6").innerHTML
+    priceDrink = drinkInfo.querySelector(".price").innerHTML
+
     if(nameFood && nameDrink && nameCandies){
-        document.querySelector(".go").classList.add("green");
-        document.querySelector(".confirm").innerHTML = 'Fechar pedido';
+        priceFood = Number(priceFood);
+        priceDrink = Number(priceDrink);
+        priceCandies = Number(priceCandies);
+        let total = priceFood + priceDrink + priceCandies
+        let text = 
+        `
+        Olá, gostaria de fazer o pedido:
+        - Prato: ${nameFood}
+        - Bebida: ${nameDrink}
+        - Sobremesa: ${nameCandies}
+        Total: R$ ${total.toFixed(2)}`
+
+        let encoded = encodeURIComponent(text);
+        
+        finish = 'Fechar pedido';
+        message = "https://wa.me/47984833226?text="+encoded
+        URL = message;
+
+        document.querySelector(".go").classList.add("green");        
+        document.querySelector(".confirm").innerHTML = finish.link(URL);
     }
 }
 function candiesInformation (candiesInfo){
@@ -67,10 +108,29 @@ function candiesInformation (candiesInfo){
     }
     candiesInfo.classList.add("information");
     nameCandies = candiesInfo.querySelector("h5").innerHTML
-    priceCandies = candiesInfo.querySelector("h6").innerHTML
+    priceCandies = candiesInfo.querySelector(".price").innerHTML
     if(nameFood && nameDrink && nameCandies){
-        document.querySelector(".go").classList.add("green");
-        document.querySelector(".confirm").innerHTML = 'Fechar pedido';
+        priceFood = Number(priceFood);
+        priceDrink = Number(priceDrink);
+        priceCandies = Number(priceCandies);
+        let total = priceFood + priceDrink + priceCandies
+        let text = 
+        `
+        Olá, gostaria de fazer o pedido:
+        - Prato: ${nameFood}
+        - Bebida: ${nameDrink}
+        - Sobremesa: ${nameCandies}
+        Total: R$ ${total.toFixed(2)}`
+
+        let encoded = encodeURIComponent(text);
+        
+        finish = 'Fechar pedido';
+        message = "https://wa.me/47984833226?text="+encoded
+        URL = message;
+
+        document.querySelector(".go").classList.add("green");        
+        document.querySelector(".confirm").innerHTML = finish.link(URL);
     }
 }
-//função para finalizar pedido
+
+
