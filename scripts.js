@@ -7,6 +7,9 @@ let nameCandies;
 let priceCandies;
 let go;
 let message;
+let namePerson;
+let address;
+let finish = 'Confirmar';
 
 
 
@@ -47,26 +50,9 @@ function foodInformation (foodInfo){
     priceFood = foodInfo.querySelector(".price").innerHTML
 
     if(nameFood && nameDrink && nameCandies){
-        priceFood = Number(priceFood);
-        priceDrink = Number(priceDrink);
-        priceCandies = Number(priceCandies);
-        let total = priceFood + priceDrink + priceCandies
-        let text = 
-        `
-        Olá, gostaria de fazer o pedido:
-        - Prato: ${nameFood}
-        - Bebida: ${nameDrink}
-        - Sobremesa: ${nameCandies}
-        Total: R$ ${total.toFixed(2)}`
-
-        let encoded = encodeURIComponent(text);
-        
-        finish = 'Fechar pedido';
-        message = "https://wa.me/47984833226?text="+encoded
-        URL = message;
-
-        document.querySelector(".go").classList.add("green");        
-        document.querySelector(".confirm").innerHTML = finish.link(URL);
+        document.querySelector(".go").classList.add("green");  
+        document.querySelector(".confirm").innerHTML = finish;  
+        go = document.querySelector(".green");
     }
 }
 function drinkInformation (drinkInfo){
@@ -79,26 +65,9 @@ function drinkInformation (drinkInfo){
     priceDrink = drinkInfo.querySelector(".price").innerHTML
 
     if(nameFood && nameDrink && nameCandies){
-        priceFood = Number(priceFood);
-        priceDrink = Number(priceDrink);
-        priceCandies = Number(priceCandies);
-        let total = priceFood + priceDrink + priceCandies
-        let text = 
-        `
-        Olá, gostaria de fazer o pedido:
-        - Prato: ${nameFood}
-        - Bebida: ${nameDrink}
-        - Sobremesa: ${nameCandies}
-        Total: R$ ${total.toFixed(2)}`
-
-        let encoded = encodeURIComponent(text);
-        
-        finish = 'Fechar pedido';
-        message = "https://wa.me/47984833226?text="+encoded
-        URL = message;
-
-        document.querySelector(".go").classList.add("green");        
-        document.querySelector(".confirm").innerHTML = finish.link(URL);
+        document.querySelector(".go").classList.add("green");  
+        document.querySelector(".confirm").innerHTML = finish; 
+        go = document.querySelector(".green"); 
     }
 }
 function candiesInformation (candiesInfo){
@@ -110,6 +79,19 @@ function candiesInformation (candiesInfo){
     nameCandies = candiesInfo.querySelector("h5").innerHTML
     priceCandies = candiesInfo.querySelector(".price").innerHTML
     if(nameFood && nameDrink && nameCandies){
+        document.querySelector(".go").classList.add("green");  
+        document.querySelector(".confirm").innerHTML = finish;
+        go = document.querySelector(".green");
+    }
+}
+function check(){
+    namePerson = prompt("Qual o seu nome?");
+    address = prompt("Qual o seu endereço?");
+    if(nameFood && nameDrink && nameCandies && namePerson && address){
+        document.querySelector(".go").classList.add("hide");
+        document.querySelector(".conclude").classList.remove("hide");
+        document.querySelector(".conclude").classList.add("green");
+
         priceFood = Number(priceFood);
         priceDrink = Number(priceDrink);
         priceCandies = Number(priceCandies);
@@ -120,17 +102,24 @@ function candiesInformation (candiesInfo){
         - Prato: ${nameFood}
         - Bebida: ${nameDrink}
         - Sobremesa: ${nameCandies}
-        Total: R$ ${total.toFixed(2)}`
-
-        let encoded = encodeURIComponent(text);
+        Total: R$ ${total.toFixed(2)}
         
-        finish = 'Fechar pedido';
-        message = "https://wa.me/47984833226?text="+encoded
+        Nome: ${namePerson}
+        Endereço: ${address}
+        `
+        ;
+        let encoded = encodeURIComponent(text);
+
+        let end = "Fechar pedido";    
+        message = "https://wa.me/47984833226?text="+encoded;
         URL = message;
 
-        document.querySelector(".go").classList.add("green");        
-        document.querySelector(".confirm").innerHTML = finish.link(URL);
+        document.querySelector(".conclude").classList.add("green");
+        document.querySelector(".end").innerHTML = end.link(URL);  
+    
     }
 }
+   
+
 
 
