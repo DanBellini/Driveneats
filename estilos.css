@@ -61,7 +61,7 @@ h6{
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 1;
+    z-index: 2;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:  #CF2B2B;
@@ -75,16 +75,18 @@ h6{
     position: fixed;
     left: 0px;
     bottom: 0px;
-    z-index: 1;
+    z-index: 2;
 
     background: #FFFFFF;
 }
-.bottom > button{
+.go{
     margin: auto 25px;
+    width: 364px;
     height: 61px;
     border-radius: 50px;
     
-    background: #CBCBCB;
+    background-color: #CBCBCB;
+    ;
 }
 .bottom p{
     font-family: 'Roboto';
@@ -170,3 +172,11 @@ ion-icon {
     bottom: 6px;
     color: #32b72f;
 } 
+
+.information{
+    z-index: 1;
+}
+
+.green {
+    background-color: #32B72F;
+}

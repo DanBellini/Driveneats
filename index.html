@@ -19,7 +19,7 @@
     <div class="conteiner">
         <p>Primeiro, seu prato</p>
         <div class="optionFood">
-            <div class="options1">
+            <div onclick= "foodInformation(this)" class="options1">
                 <img src="/Projetos/projeto3-driveneats/imagens/frango_yin_yang 1.png">
                 <h5>Frango Yin-Yang</h5>
                 <p>Um pouco de batata, um pouco de salada</p>
@@ -28,7 +28,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="options1">
+            <div onclick= "foodInformation(this)" class="options1">
                 <img src="/Projetos/projeto3-driveneats/imagens/frango_yin_yang 1.png">
                 <h5>Frango Yin-Yang</h5>
                 <p>Um pouco de batata, um pouco de salada</p>
@@ -37,7 +37,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="options1">
+            <div onclick= "foodInformation(this)" class="options1">
                 <img src="/Projetos/projeto3-driveneats/imagens/frango_yin_yang 1.png">
                 <h5>Frango Yin-Yang</h5>
                 <p>Um pouco de batata, um pouco de salada</p>
@@ -49,7 +49,7 @@
         </div>
         <p>Agora, sua bebida</p>
         <div class="optionDrink">
-            <div class="options2">
+            <div  onclick="drinkInformation(this)" class="options2">
                 <img src="/Projetos/projeto3-driveneats/imagens/coquinha_gelada 1.png">
                 <h5>Coquinha Gelada</h5>
                 <p>Lata 350ml</p>
@@ -58,7 +58,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="options2">
+            <div  onclick="drinkInformation(this)" class="options2">
                 <img src="/Projetos/projeto3-driveneats/imagens/coquinha_gelada 1.png">
                 <h5>Coquinha Gelada</h5>
                 <p>Lata 350ml</p>
@@ -67,7 +67,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="options2">
+            <div  onclick="drinkInformation(this)" class="options2">
                 <img src="/Projetos/projeto3-driveneats/imagens/coquinha_gelada 1.png">
                 <h5>Coquinha Gelada</h5>
                 <p>Lata 350ml</p>
@@ -79,7 +79,7 @@
         </div>
         <p>Por fim, sua sobremesa</p>
         <div class="optionCandies">
-            <div class="options3">
+            <div onclick="candiesInformation(this)" class="options3">
                 <img src="/Projetos/projeto3-driveneats/imagens/pudim 1.png">
                 <h5>Pudim</h5>
                 <p>Apenas pudim</p>
@@ -88,7 +88,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-            <div class="options3">
+            <div  onclick="candiesInformation(this)"  class="options3">
                 <img src="/Projetos/projeto3-driveneats/imagens/pudim 1.png">
                 <h5>Pudim</h5>
                 <p>Apenas pudim</p>
@@ -97,7 +97,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div> 
-            <div class="options3">
+            <div  onclick="candiesInformation(this)"  class="options3">
                 <img src="/Projetos/projeto3-driveneats/imagens/pudim 1.png">
                 <h5>Pudim</h5>
                 <p>Apenas pudim</p>
@@ -109,8 +109,8 @@
         </div>
     </div>
     <div class="bottom">
-        <button>
-            <p>Selecione os 3 itens para fechar o pedido</p>
+        <button class="go" onclick="check()">
+            <p class="confirm">Selecione os 3 itens para fechar o pedido</p>
         </button>
     <script src="scripts.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
