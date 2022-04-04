@@ -184,3 +184,6 @@ ion-icon {
 .hide{
     display: none;
 }
+.yellow{
+    background-color: rgb(224, 224, 0);
+}

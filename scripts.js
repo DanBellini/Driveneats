@@ -9,7 +9,7 @@ let go;
 let message;
 let namePerson;
 let address;
-let finish = 'Confirmar';
+let finish = 'Confirmar dados';
 
 
 
@@ -50,9 +50,9 @@ function foodInformation (foodInfo){
     priceFood = foodInfo.querySelector(".price").innerHTML
 
     if(nameFood && nameDrink && nameCandies){
-        document.querySelector(".go").classList.add("green");  
+        document.querySelector(".go").classList.add("yellow");  
         document.querySelector(".confirm").innerHTML = finish;  
-        go = document.querySelector(".green");
+        go = document.querySelector(".yellow");
     }
 }
 function drinkInformation (drinkInfo){
@@ -65,9 +65,9 @@ function drinkInformation (drinkInfo){
     priceDrink = drinkInfo.querySelector(".price").innerHTML
 
     if(nameFood && nameDrink && nameCandies){
-        document.querySelector(".go").classList.add("green");  
+        document.querySelector(".go").classList.add("yellow");  
         document.querySelector(".confirm").innerHTML = finish; 
-        go = document.querySelector(".green"); 
+        go = document.querySelector(".yellow"); 
     }
 }
 function candiesInformation (candiesInfo){
@@ -79,9 +79,9 @@ function candiesInformation (candiesInfo){
     nameCandies = candiesInfo.querySelector("h5").innerHTML
     priceCandies = candiesInfo.querySelector(".price").innerHTML
     if(nameFood && nameDrink && nameCandies){
-        document.querySelector(".go").classList.add("green");  
+        document.querySelector(".go").classList.add("yellow");  
         document.querySelector(".confirm").innerHTML = finish;
-        go = document.querySelector(".green");
+        go = document.querySelector(".yellow");
     }
 }
 function check(){
